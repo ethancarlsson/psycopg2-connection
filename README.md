@@ -25,6 +25,7 @@
     Import the PgDbConnector, Create a class that inherits from it and add your database's information.
 </p>
 <code>
+
         from db_connections import pgDbConnector
 
         class MyDbConnector(pgDbConnector):
