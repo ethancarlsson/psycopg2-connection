@@ -5,4 +5,4 @@ to worry about opening and closing connections to postgres.
 '''
 from .psycopg2_connection import PgDbConnector
 
-__version__ = "0.1.1"
+__version__ = "0.1.1.1"

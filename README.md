@@ -26,14 +26,14 @@
 </p>
 <code>
 
-        from db_connections import pgDbConnector
+    from psycopg2-connection import PgDbConnector
 
-        class MyDbConnector(pgDbConnector):
-            host = 'my host'
-            dbname = 'my databases name'
-            user = 'my username'
-            password = 'my password'
-    
+    class MyDbConnector(PgDbConnector):
+        host = 'my-host'
+        dbname = 'my-databases-name'
+        user = 'my-username'
+        password = 'my-password'
+
 </code>
 <p>
     You may find it conventient to place this "connector" in a seperate file and inherit from it. This way your database information can be kept secure.
