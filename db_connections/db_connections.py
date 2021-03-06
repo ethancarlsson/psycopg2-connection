@@ -5,7 +5,12 @@ import psycopg2
 
 class PgDbConnector:
     '''
-    Has methods that makes connections to the DB a little cleaner
+    Has methods that makes connections to the DB a little cleaner.
+    You will need to add the following class attributes to connect to your database:
+        host = 'Your host name'
+        dbname = 'Your database name'
+        user = 'Your username'
+        password = 'Your password'
     '''
     host = str()
     dbname = str()
@@ -36,7 +41,7 @@ class PgDbConnector:
         conn.close()
 
 
-    def update_records(self, sql):
+    def execute_and_commit(self, sql):
         '''
         Updates records based on an sql query.
         '''
