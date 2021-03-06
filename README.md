@@ -7,7 +7,7 @@
 </p>
 <h2>
     What does it do?
-<h2>
+</h2>
 <p>
     It makes it easier and quicker to fetch, execute and commmit to a postgres table. Also has methods to help copy to and from IO like files. 
 </p>
@@ -19,10 +19,11 @@
     This package is for projects where you want to work directly with postgres, but you don't want to be openning and closing database connections within your code. 
 </p>
 <h2>
-    How to use?
+    How do you use it?
 </h2>
 <p>
     Import the PgDbConnector, Create a class that inherits from it and add your database's information.
+</p>
 <code>
         from db_connections import pgDbConnector
 
@@ -33,11 +34,13 @@
             password = 'my password'
     
 </code>
+<p>
     You may find it conventient to place this "connector" in a seperate file and inherit from it. This way your database information can be kept secure.
 
     Now you can begin creating classes to interact with your postgres database. For example:
-
+</p>
 <code>
+
     from io import SringIO
     from other_file import MyDbConnector
 
@@ -64,7 +67,9 @@
                 'new_data'
             )
 </code>
+<p>
     This little example class initiates with data from your postgres table. It then loops over the data, extracts some data from the first row and appends the primary key from the first table and the new data to a string representaiton of a new table. Onse the loop is complete it transforms that string to an StringIO and uses copy_from_file to add the data to a new table. 
-
+</p>
+<p>
     It should be noted that we will have opened and closed 2 connections to our database if we call the make_new_table function, but we didn't have to see these connections in the code. The hope is that this way it can feel like we are just writing sql code into our python program, without needing to worry about the connections and without needing to wrap our heads around a whole new framework or ORM.
 </p>
