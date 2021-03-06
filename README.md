@@ -1,9 +1,9 @@
 <h1>
-    Psycopg2 Mini Abstractions
+    Psycopg2 Connection
 </h1>
 <p>
-    Psycopg2 Mini Abstractions is a very light module which makes some abstractions on top of the psycopg2 package.
-    The goal is to help you write SQL code right into your python program, without needing to worry about oppening and closing connections to postgres. 
+    Psycopg2 Connection is a very light module which makes some abstractions on top of the psycopg2 package.
+    The goal is to help you write SQL code right into your python program, without needing to worry about opening and closing connections to postgres. 
 </p>
 <h2>
     What does it do?
@@ -37,7 +37,8 @@
 </code>
 <p>
     You may find it conventient to place this "connector" in a seperate file and inherit from it. This way your database information can be kept secure.
-
+</p>
+<p>
     Now you can begin creating classes to interact with your postgres database. For example:
 </p>
 <code>

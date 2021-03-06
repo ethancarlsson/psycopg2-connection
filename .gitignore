@@ -1,1 +1,4 @@
 setup.py
+build/
+dist/
+psycopg2_connection.egg-info/
